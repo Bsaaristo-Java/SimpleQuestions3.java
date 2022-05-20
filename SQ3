@@ -1,0 +1,60 @@
+public class PreCourseQ3 {
+
+	public static void main(String[] args) {
+		// 
+		//double FV = valueP * [1 +(interestR *time)];
+		////////////////Q1////////////////
+		double valueP = 20000;
+		double interestR = .045;
+		double time = 15;
+		getFutureValue(valueP, interestR, time);
+		/////////////////Q2///////////////
+		double tabA = 33.57;
+		String serviceS = "Great";
+		tipAmmount(tabA, serviceS);
+		////////////Q3////////////
+		double paid = 18;
+		double cost = 17.18;
+		changeTotal(paid,cost);
+
+	}
+	private static void getFutureValue(double valueP, double interestR, double time) {
+		// future value funct
+		
+		double rateEx = (interestR*time)+1;
+		double valueF = valueP*rateEx;
+		System.out.println("Future value: " + valueF);}
+    
+		//done
+    
+		//Write a function that returns the recommended tip based on the amount of the tab and the service performed. 
+		//Use the following table to calculate the tip: Service Quality  Tip Percent Poor    16% Good   22% Great   26% 
+    
+	private static void tipAmmount(double tabA,String serviceS ) {
+			//System.out.println("Tip ammount is: " + );
+		if (serviceS == "Great") {
+			System.out.println("Tip ammount is: " + tabA*.26);}
+			else if (serviceS == "Good") {
+				System.out.println("Tip ammount is: " + tabA*.22);}
+			else if (serviceS == "Poor") {
+				System.out.println("Tip ammount is: " + tabA*.16);}
+			}
+
+		 private static void changeTotal(double paid, double cost) {
+			 double xy = (paid - cost)*100;
+			 int change = (int)xy;
+			 int quarters = (int)(change/25);
+			 change = change - quarters * 25;
+			 int dimes = (int)(change/10);
+			 change = change - dimes * 10;
+			 int nickels = (int)(change/5);
+			 change = change - nickels * 5;
+			 int pennies = (int)(change/1);
+			 change = change - pennies;
+			 System.out.println("Quarters: "+ quarters);
+			 System.out.println("Dimes: "+ dimes);
+			 System.out.println("Nickels: "+ nickels);
+			 System.out.println("Pennies: "+ pennies);
+		 }		
+		}
+
